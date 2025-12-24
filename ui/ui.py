@@ -106,36 +106,3 @@ if user_input:
 # -------------------------------------------------
 st.markdown("---")
 st.caption("Built by Raja | GenAI Engineer")
-
-# Diagram
-st.markdown("## 🏗️ System Architecture")
-
-st.components.v1.html(
-    """
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <div class="mermaid">
-    flowchart LR
-        U[👤 HR User] --> UI[🎨 Streamlit UI]
-        U --> API[⚙️ FastAPI]
-
-        UI --> AGENT[🧠 LangGraph Agent]
-        API --> AGENT
-
-        AGENT -->|Need Context| RET[🔎 RAG Retriever]
-        RET --> VDB[(📦 FAISS Vector DB)]
-        KB[📚 HR Policies] --> VDB
-
-        RET --> AGENT
-        AGENT --> LLM[🤖 Groq LLM]
-        LLM --> AGENT
-
-        AGENT --> UI
-        AGENT --> API
-    </div>
-
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-    """,
-    height=450,
-)
