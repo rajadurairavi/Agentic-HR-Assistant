@@ -1,5 +1,6 @@
 # 🤖 Agentic HR Assistant
 
+<<<<<<< HEAD
 A production-style **GenAI-powered HR chatbot** built using **Agentic AI + RAG**.
 The system answers HR policy questions (leave, country-specific rules) in a
 **reliable and explainable way**.
@@ -9,6 +10,21 @@ The system answers HR policy questions (leave, country-specific rules) in a
 ## 🧠 Key Idea
 
 This is **not a simple chatbot**.
+=======
+---
+## 📌 What is this project?
+
+Agentic HR Assistant is a **GenAI-powered HR chatbot** that answers HR policy questions
+(like annual leave, sick leave, country-specific rules) using:
+
+- **Agentic AI (LangGraph)** for decision making
+- **RAG (FAISS + embeddings)** for grounded answers
+- **FastAPI** for backend APIs
+- **Streamlit** for interactive UI
+
+The same **single agent (brain)** is reused across UI and API.
+---
+>>>>>>> a18795f03f68a5e8291c6359b53e8190177cc612
 
 - The **agent decides what to do**
 - The **knowledge base provides facts**
